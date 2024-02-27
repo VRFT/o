@@ -1,0 +1,14 @@
+# Usa una imagen base de Python
+FROM python:3.8
+
+# Copia tu código al contenedor
+COPY . /app
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Instala las dependencias necesarias
+RUN pip install -r requirements.txt  # Si tienes un archivo de requisitos
+
+# Comando para ejecutar tu script
+CMD ["python", "ordenar_frutas.py"]
